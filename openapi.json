@@ -1,0 +1,16 @@
+{
+  "openapi": "3.0.3",
+  "info": { "title": "org-service", "version": "0.1.0" },
+  "paths": {
+    "/healthz": { "get": { "responses": { "200": { "description": "ok" } } } },
+    "/ready": { "get": { "responses": { "200": { "description": "ready" }, "503": { "description": "not ready" } } } },
+    "/org": { "post": { "responses": { "200": { "description": "ok" } } } },
+    "/org/{id}": { "get": { "parameters": [{ "name": "id", "in": "path", "required": true, "schema": { "type": "string" } }], "responses": { "200": { "description": "ok" } } } },
+    "/brand": { "get": { "responses": { "200": { "description": "ok" } } }, "post": { "responses": { "200": { "description": "ok" } } } },
+    "/business": { "get": { "responses": { "200": { "description": "ok" } } }, "post": { "responses": { "200": { "description": "ok" } } } },
+    "/business/{id}": { "get": { "responses": { "200": { "description": "ok" } } }, "patch": { "responses": { "200": { "description": "ok" }, "404": { "description": "not found" } } } },
+    "/franchise": { "get": { "responses": { "200": { "description": "ok" } } }, "post": { "responses": { "200": { "description": "ok" } } } },
+    "/franchise/{id}": { "get": { "responses": { "200": { "description": "ok" } } }, "patch": { "responses": { "200": { "description": "ok" }, "404": { "description": "not found" } } } }
+  }
+}
+
